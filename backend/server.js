@@ -3,22 +3,14 @@ const fs = require('fs')
 const path = require('path')
 const {host, PORT} = require('./config')
 const Express = require('./lib/express')
+//load modules
+const expanseController = require('./modules/expanse/controller')
+const incomeController = require('./modules/income/controller')
 
 const server = http.createServer((req, res) => {
     const app = new Express(req, res)
-    app.get('/expanse', (req, res) => {
-        fs.readFile(path.join('database', 'expanse.json'), 'UTF-8', (err, data) => {
-            res.writeHead(200, { 'Content-Type': 'application/json' })
-            return res.end(data)
-        })
-    })
-
-    app.get('/income', (req, res) => {
-        fs.readFile(path.join('database', 'income.json'), 'UTF-8', (err, data) => {
-            res.writeHead(200, { 'Content-Type': 'application/json' })
-            return res.end(data)
-        })
-    })
+    app.get('/expanse', expanseController.GET)
+    app.get('/income', incomeController.GET)
 
 })
 server.listen(PORT, () => {
