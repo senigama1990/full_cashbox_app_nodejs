@@ -8,6 +8,11 @@ class Express {
             callback(this.req, this.res)
         }
     }
+    post(path, callback) {
+        if (this.req.url === path && this.req.method === 'POST') {
+            callback(this.req, this.res)
+        }
+    }
 }
 
 module.exports = Express

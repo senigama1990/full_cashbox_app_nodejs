@@ -10,6 +10,7 @@ const incomeController = require('./modules/income/controller')
 const server = http.createServer((req, res) => {
     const app = new Express(req, res)
     app.get('/expanse', expanseController.GET)
+    app.post('/expanse', expanseController.POST)
     app.get('/income', incomeController.GET)
 
 })

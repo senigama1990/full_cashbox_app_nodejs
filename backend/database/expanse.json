@@ -4,5 +4,11 @@
         "nimaga sarflandi": "mobile phone",
         "summa": 1000,
         "data": "2021-08-30"
+    },
+    {
+        "id": 2,
+        "purpose": "Laptop",
+        "cost": 1000,
+        "date": "2021-08-31T10:17:15.790Z"
     }
 ]
