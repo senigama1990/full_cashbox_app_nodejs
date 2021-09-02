@@ -2,7 +2,13 @@
     {
         "id": 1,
         "daromad manbai": "oylik",
-        "summa": 5000,
+        "cost": 5000,
         "data": "2021-08-29"
+    },
+    {
+        "id": 2,
+        "purpose": "courses",
+        "cost": 10000,
+        "date": "2021-09-02T16:20:34.786Z"
     }
 ]
