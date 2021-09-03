@@ -1,14 +1,26 @@
 [
     {
         "id": 1,
-        "daromad manbai": "oylik",
-        "cost": 5000,
-        "data": "2021-08-29"
+        "purpose": "courses",
+        "cost": 10000,
+        "date": "2021-09-03T11:16:07.625Z"
     },
     {
         "id": 2,
-        "purpose": "courses",
-        "cost": 10000,
-        "date": "2021-09-02T16:20:34.786Z"
+        "purpose": "oylik",
+        "cost": 5000,
+        "date": "2021-09-03T11:16:34.453Z"
+    },
+    {
+        "id": 3,
+        "purpose": "bussness",
+        "cost": "20000",
+        "date": "2021-09-03T11:57:40.095Z"
+    },
+    {
+        "id": 4,
+        "purpose": "found",
+        "cost": "5000",
+        "date": "2021-09-03T12:08:48.654Z"
     }
 ]

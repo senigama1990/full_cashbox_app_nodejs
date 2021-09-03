@@ -1,6 +1,4 @@
 const http = require('http')
-const fs = require('fs')
-const path = require('path')
 const {host, PORT} = require('./config')
 const Express = require('./lib/express')
 //load modules
@@ -9,7 +7,13 @@ const incomeController = require('./modules/income/controller')
 const balanceController = require('./modules/balance/controller')
 
 const server = http.createServer((req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
     const app = new Express(req, res)
+
+    if (req.method === 'OPTIONS') return res.end('200')
+
+
     app.get('/expanse', expanseController.GET)
     app.post('/expanse', expanseController.POST)
 

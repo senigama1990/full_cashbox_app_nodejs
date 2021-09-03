@@ -19,26 +19,22 @@
                 <li class="item"><a href="./balance.html">balance</a></li>
             </ul>
         </nav>
-        <form>
-            <input type="text" placeholder="Maqsad...">
-            <input type="text" placeholder="Summa...">
-            <button>Send</button>
+        <form id='form'>
+            <input id='purpose' type="text" placeholder="Maqsad...">
+            <input id='cost' type="text" placeholder="Summa...">
+            <button type="submit">Send</button>
         </form>
-        <table class="table">
+        <table class="table" id='table'>
             <tr class="table_header">
                 <th>№</th>
                 <th>Maqsad</th>
                 <th>Summa</th>
                 <th>Vaqt</th>
             </tr>
-            <tr class="body">
-                <td>1</td>
-                <td>Oylik</td>
-                <td>$500</td>
-                <td>2021-08-29</td>
-            </tr>
         </table>
     </div>
+    <script src="../js/request.js"></script>
+    <script src="../js/expanse.js"></script>
 </body>
 
 </html>
