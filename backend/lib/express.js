@@ -13,6 +13,11 @@ class Express {
             callback(this.req, this.res)
         }
     }
+    delete(path, callback) {
+        if (this.req.url === path && this.req.method === 'DELETE') {
+            callback(this.req, this.res)
+        }
+    }
 }
 
 module.exports = Express

@@ -9,6 +9,7 @@ const balanceController = require('./modules/balance/controller')
 const server = http.createServer((req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+    res.setHeader("Access-Control-Allow-Methods", "*");
     const app = new Express(req, res)
 
     if (req.method === 'OPTIONS') return res.end('200')
@@ -16,6 +17,7 @@ const server = http.createServer((req, res) => {
 
     app.get('/expanse', expanseController.GET)
     app.post('/expanse', expanseController.POST)
+    app.delete('/expanse', expanseController.DELETE)
 
     app.get('/income', incomeController.GET)
     app.post('/income', incomeController.POST)

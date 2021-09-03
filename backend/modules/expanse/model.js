@@ -25,8 +25,9 @@ const insertExpanse = (expanse) => {
             }
         } else {
             data = JSON.parse(data)
+            let id = data.length ? data[data.length - 1].id + 1 : 1
             newExpanse = {
-                id: data[data.length - 1].id + 1,
+                id: id,
                 purpose,
                 cost,
                 date: new Date()
@@ -41,5 +42,28 @@ const insertExpanse = (expanse) => {
 
 }
 
-module.exports = { fetchAll, insertExpanse}
 
+function del(obj) {
+    try {
+        let { id } = obj
+        let data = fs.readFileSync(path.join(process.cwd(), 'database', 'expanse.json'), 'UTF-8')
+        if (data) {
+            data = JSON.parse(data)
+            let filtered = data.filter((el) => el.id != id)
+            if (filtered.length < data.length ) {
+                fs.writeFileSync(path.join(process.cwd(), 'database', 'expanse.json'), filtered == 0 ? '' : JSON.stringify(filtered, null, 4))
+                return filtered
+            } else {
+                throw 'An error'
+            }
+            
+        } else {
+            throw 'Database is empty'
+        }
+
+    } catch (err) {
+        return null
+    }   
+}
+
+module.exports = { fetchAll, insertExpanse, del }
