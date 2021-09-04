@@ -5,6 +5,7 @@ const Express = require('./lib/express')
 const expanseController = require('./modules/expanse/controller')
 const incomeController = require('./modules/income/controller')
 const balanceController = require('./modules/balance/controller')
+const authController = require('./modules/auth/controller')
 
 const server = http.createServer((req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -22,9 +23,11 @@ const server = http.createServer((req, res) => {
     app.get('/income', incomeController.GET)
     app.post('/income', incomeController.POST)
     app.delete('/income', incomeController.DELETE)
-   
+    
     app.get('/balance', balanceController.GET)
-
+    
+    app.post('/register', authController.REGISTER)
+    app.post('/login', authController.LOGIN)
 
 
 })
