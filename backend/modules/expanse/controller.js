@@ -1,5 +1,4 @@
 const expanseModel = require('./model')
-const fs = require('fs')
 const GET = (req, res) => {
     try {
         res.writeHead(200, { 'Content-Type': 'application/json' })
@@ -35,10 +34,10 @@ const DELETE = (req, res) => {
         req.on('end', () => {
             let deleted = expanseModel.del(JSON.parse(buffer))
             if (deleted) {
-                res.writeHead(204, { 'Content-Type': 'application/json' })
+                res.writeHead(200, { 'Content-Type': 'application/json' })
                 return res.end(JSON.stringify({ message: 'The data has been deleted', body: deleted }))
             } else {
-                res.writeHead(204, { 'Content-Type': 'application/json' })
+                res.writeHead(200, { 'Content-Type': 'application/json' })
                 return res.end(JSON.stringify({ message: 'an error', body: null }))
             }
         })

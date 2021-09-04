@@ -21,6 +21,7 @@ const server = http.createServer((req, res) => {
 
     app.get('/income', incomeController.GET)
     app.post('/income', incomeController.POST)
+    app.delete('/income', incomeController.DELETE)
    
     app.get('/balance', balanceController.GET)
 

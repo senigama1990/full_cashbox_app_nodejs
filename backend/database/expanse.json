@@ -1,8 +1,14 @@
 [
     {
         "id": 1,
-        "purpose": "oylik",
-        "cost": 5000,
-        "date": "2021-09-03T14:18:50.324Z"
+        "purpose": "oziq-ovqat",
+        "cost": "500",
+        "date": "2021-09-04T08:47:05.468Z"
+    },
+    {
+        "id": 2,
+        "purpose": "kiyim",
+        "cost": "500",
+        "date": "2021-09-04T08:47:13.670Z"
     }
 ]

@@ -1,26 +1,14 @@
 [
     {
         "id": 1,
-        "purpose": "courses",
-        "cost": 10000,
-        "date": "2021-09-03T11:16:07.625Z"
+        "purpose": "oylik",
+        "cost": "5000",
+        "date": "2021-09-04T08:46:44.675Z"
     },
     {
         "id": 2,
-        "purpose": "oylik",
-        "cost": 5000,
-        "date": "2021-09-03T11:16:34.453Z"
-    },
-    {
-        "id": 3,
-        "purpose": "bussness",
-        "cost": "20000",
-        "date": "2021-09-03T11:57:40.095Z"
-    },
-    {
-        "id": 4,
-        "purpose": "found",
+        "purpose": "biznes",
         "cost": "5000",
-        "date": "2021-09-03T12:08:48.654Z"
+        "date": "2021-09-04T08:46:52.657Z"
     }
 ]

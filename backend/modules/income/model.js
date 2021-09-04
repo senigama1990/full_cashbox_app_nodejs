@@ -41,5 +41,28 @@ const insertIncome = (income) => {
 
 }
 
-module.exports = { fetchAll, insertIncome }
+function del(obj) {
+    try {
+        let { id } = obj
+        let data = fs.readFileSync(path.join(process.cwd(), 'database', 'income.json'), 'UTF-8')
+        if (data) {
+            data = JSON.parse(data)
+            let filtered = data.filter((el) => el.id != id)
+            if (filtered.length < data.length) {
+                fs.writeFileSync(path.join(process.cwd(), 'database', 'income.json'), filtered == 0 ? '' : JSON.stringify(filtered, null, 4))
+                return filtered
+            } else {
+                throw 'An error'
+            }
+
+        } else {
+            throw 'Database is empty'
+        }
+
+    } catch (err) {
+        return null
+    }
+}
+
+module.exports = { fetchAll, insertIncome, del }
 

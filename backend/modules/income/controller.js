@@ -26,4 +26,26 @@ const POST = (req, res) => {
     }
 }
 
-module.exports = { GET, POST }
+const DELETE = (req, res) => {
+    try {
+        let buffer = ''
+        req.on('data', (data) => {
+            buffer += data
+        })
+        req.on('end', () => {
+            let deleted = incomeModel.del(JSON.parse(buffer))
+            if (deleted) {
+                res.writeHead(200, { 'Content-Type': 'application/json' })
+                return res.end(JSON.stringify({ message: 'The data has been deleted', body: deleted }))
+            } else {
+                res.writeHead(200, { 'Content-Type': 'application/json' })
+                return res.end(JSON.stringify({ message: 'an error', body: null }))
+            }
+        })
+    } catch (err) {
+        res.statusCode = 400
+        return res.end(err.message)
+    }
+}
+
+module.exports = { GET, POST, DELETE }
