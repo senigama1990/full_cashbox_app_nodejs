@@ -10,6 +10,16 @@ const server = http.createServer((req, res) => {
             res.writeHead(200, { 'Content-Type': 'text/html' })
             return res.end(data)
         })
+    } else if (req.url === '/login' && req.method === 'GET') {
+        fs.readFile(path.join('assets', 'pages', 'login.html'), 'UTF-8', (err, data) => {
+            res.writeHead(200, { 'Content-Type': 'text/html' })
+            return res.end(data)
+        })
+    } else if (req.url === '/register' && req.method === 'GET') {
+        fs.readFile(path.join('assets', 'pages', 'register.html'), 'UTF-8', (err, data) => {
+            res.writeHead(200, { 'Content-Type': 'text/html' })
+            return res.end(data)
+        })
     } else {
         let filePath = req.url
         let reqMimeType = path.extname(filePath)

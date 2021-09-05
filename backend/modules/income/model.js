@@ -25,8 +25,9 @@ const insertIncome = (income) => {
             }
         } else {
             data = JSON.parse(data)
+            let id = data.length ? data[data.length - 1].id + 1 : 1
             newIncome = {
-                id: data[data.length - 1].id + 1,
+                id: id,
                 purpose,
                 cost,
                 date: new Date()

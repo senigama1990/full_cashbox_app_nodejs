@@ -3,18 +3,24 @@
         "id": 1,
         "username": "Suxrob",
         "password": "1111",
-        "email": "suxrob@mail.ru"
+        "email": "senigama1990@mail.ru"
     },
     {
         "id": 2,
-        "username": "user1",
-        "password": "121",
-        "email": "qweqwe@mail.ru"
+        "username": "123",
+        "password": "1111",
+        "email": "senigama1990@mail.ru"
     },
     {
         "id": 3,
-        "username": "user2",
-        "password": "121",
-        "email": "qweqwe@mail.ru"
+        "username": "qq",
+        "password": "1212",
+        "email": "senigama1990@mail.ru"
+    },
+    {
+        "id": 4,
+        "username": "uqituvchi342",
+        "password": "1111",
+        "email": "senigama1990@mail.ru"
     }
 ]
